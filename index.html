@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSAC Escape room</title>
+    <style>
+        body {
+            font-family: "Montserrat", serif;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 100px;
+            background-image: url(background2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        input,button{
+            margin: 10px;
+            padding: 15px;
+            font-size: 24px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Enter Password</h2>
+    <input id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+    
+    <script>
+        function checkPassword() {
+            const correctPassword = "1234"; // Set your password here
+            const userPassword = document.getElementById("password").value;
+            
+            if (userPassword === correctPassword) {
+                window.location.href = "success.html";
+            } else {
+                window.location.href = "failure.html";
+            }
+        }
+    </script>
+</body>
+</html>
